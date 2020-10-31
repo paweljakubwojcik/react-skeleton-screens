@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import Articles from './components/Aticles'
+import User from './components/User'
+
+const Header = styled.header`
+background-color: #1e65ff;
+padding: 10px;
+> h1 {
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+`
+const Content = styled.div`
+width:100%;
+max-width:1200px;
+margin: 0 auto;
+padding: 20px;
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap:100px;
+`
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <h1>React Skeletons</h1>
+      </Header>
+      <Content>
+        <Articles />
+        <User />
+
+      </Content>
     </div>
   );
 }
