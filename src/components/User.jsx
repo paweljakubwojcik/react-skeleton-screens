@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Styled from 'styled-components'
+import SkeletonProfile from '../skeletons/SkeletonProfile'
 
 const Profile = Styled.div`
 
@@ -30,7 +31,7 @@ export default function User() {
             )}
 
             {!profile && (
-                <div>Loading</div>
+                <SkeletonProfile></SkeletonProfile>
             )}
         </div>
 
