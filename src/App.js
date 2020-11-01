@@ -2,6 +2,21 @@ import styled from 'styled-components'
 import Articles from './components/Aticles'
 import User from './components/User'
 
+function App() {
+  return (
+    <div className="App">
+      <Header>
+        <h1>React Skeletons</h1>
+      </Header>
+      <Content>
+        <Articles />
+        <User />
+
+      </Content>
+    </div>
+  );
+}
+
 const Header = styled.header`
   background-color: #1e65ff;
   padding: 10px;
@@ -21,21 +36,5 @@ const Content = styled.div`
   grid-template-columns: 2fr 1fr;
   gap:100px;
 `
-
-
-function App() {
-  return (
-    <div className="App">
-      <Header>
-        <h1>React Skeletons</h1>
-      </Header>
-      <Content>
-        <Articles />
-        <User />
-
-      </Content>
-    </div>
-  );
-}
 
 export default App;
